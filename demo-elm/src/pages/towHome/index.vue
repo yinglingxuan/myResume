@@ -9,9 +9,9 @@
                  <div> 后端开发技能 : JAVA,MySql,Redis,Spring Boot,Mybatis,前后端分离开发模式,实现api</div>
                  <div> 前端开发技能 : 能熟练运用DIV + CSS,HTML,MVVM模块化开发，小程序公众号开发,利用各种技巧实现交互丰富的界面</div>
                  <div> 熟悉的框架 : Vue.js,Jquery,elementUi,LayUi,uniapp等</div>
-                 <div>
+                 <div >
                   <a href="http://cnd.yinglingxuan.cn/%E5%89%8D%E7%AB%AF%E7%AE%80%E5%8E%86-3%E5%B9%B4.pdf" download="http://cnd.yinglingxuan.cn/%E5%89%8D%E7%AB%AF%E7%AE%80%E5%8E%86-3%E5%B9%B4.pdf">
-                      <button> Download Resume</button>
+                      <button onmouseover="Choice('下载PDF个人简历')"> Download Resume</button>
                   </a>
                 </div>
             </div>

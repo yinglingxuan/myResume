@@ -2,22 +2,22 @@
     <div class="production-body">
         <h1>个人作品集</h1>
         <div class="pro-ul">
-            <div class="pro-li" style="background: url(http://cnd.yinglingxuan.cn/els.png) no-repeat;background-size: 100% 100%;">
+            <div class="pro-li" style="background: url(http://cnd.yinglingxuan.cn/els.png) no-repeat;background-size: 100% 100%;"  onmouseover="Choice('俄罗斯方块canvas练手作品')">
                 <a href="http://lin.yinglingxuan.cn/%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97.html"><p>俄罗斯方块canvas练手作品</p></a>
             </div>
-            <div class="pro-li" style="background: url(http://cnd.yinglingxuan.cn/dazitup.png) no-repeat;background-size: 100% 100%;">
+            <div class="pro-li" style="background: url(http://cnd.yinglingxuan.cn/dazitup.png) no-repeat;background-size: 100% 100%;" onmouseover="Choice('html打字小游戏')">
                  <a href="http://cnd.yinglingxuan.cn/type-demo.html"><p>html打字小游戏</p></a>
             </div>
-            <div class="pro-li" style="background: url(http://cnd.yinglingxuan.cn/ysp.png) no-repeat;background-size: 100% 100%;">
+            <div class="pro-li" style="background: url(http://cnd.yinglingxuan.cn/ysp.png) no-repeat;background-size: 100% 100%;" onmouseover="Choice('音视频播放器')">
                  <a href="http://lin.yinglingxuan.cn/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A83.html"><p>音视频播放器</p></a>
             </div>
-            <div class="pro-li" style="background: url(http://cnd.yinglingxuan.cn/gerenjianli.png) no-repeat;background-size: 100% 100%;">
+            <div class="pro-li" style="background: url(http://cnd.yinglingxuan.cn/gerenjianli.png) no-repeat;background-size: 100% 100%;" onmouseover="Choice('本网站-个人简历-兼容手机')">
                  <a href="https://github.com/yinglingxuan/index.html"><p>本网站-个人简历-兼容手机</p></a>
             </div>
-            <div class="pro-li" style="background: url(http://cnd.yinglingxuan.cn/layui.png) no-repeat;background-size: 100% 100%;">
+            <div class="pro-li" style="background: url(http://cnd.yinglingxuan.cn/layui.png) no-repeat;background-size: 100% 100%;" onmouseover="Choice('layUi后台管理练手作品')">
                  <a href="https://github.com/yinglingxuan/backstage"><p>layUi后台管理练手作品</p></a>
             </div>
-            <div class="pro-li" style="background: url(http://cnd.yinglingxuan.cn/xcxt.jpg) no-repeat;background-size: 100% 100%;">
+            <div class="pro-li" style="background: url(http://cnd.yinglingxuan.cn/xcxt.jpg) no-repeat;background-size: 100% 100%;" onmouseover="Choice('商城类小程序')">
                  <a href="https://github.com/yinglingxuan/AppLet"><p>商城类小程序</p></a>
             </div>
         </div>

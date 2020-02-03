@@ -8,8 +8,8 @@
           <p>熟练使用JAVA 开发 Web服务器<br/>
             熟练JavaWeb开发，理解MVC开发模式和熟练使用Spring Boot,Spring MVC，MyBatis 开发<br/>
             熟练Web前端开发技术，熟悉前后端分离开发模式<br/>
-            可熟练使用Vue、HTML、CSS、JQuery、JavaScript、AJAX进行页面开发<br/>
-            熟悉多种前端框架如LayUI、Eleme-Ui等<br/>
+            可熟练使用Vue、HTML、CSS、JQuery、JavaScript、AJAX、uni-app进行页面开发<br/>
+            熟悉多种前端框架如LayUI、Eleme-Ui、Vant等<br/>
             熟练使用Nginx、CND文件加速配置<br/>
             熟悉Linux操作系统的使用<br/>
             熟悉微信公众号小程序开发<br/>

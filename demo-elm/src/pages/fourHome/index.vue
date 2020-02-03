@@ -12,7 +12,7 @@
         <el-steps direction="vertical" :active="0">
           <el-step title="" description=""></el-step>
           <el-step title="汕头平行软件科技有限公司"  description="负责PC端移动端页面制作。公众号小程序开发"></el-step>
-          <el-step title="深圳积家系统实业有限公司" description="负责小程序商城类开发"></el-step>
+          <el-step title="深圳建科网络科技有限公司" description="负责公众号页面、SaaS系统，公装宝APP的迭代维护"></el-step>
         </el-steps>
       </div>
     </div>

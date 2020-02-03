@@ -13,7 +13,7 @@
           <p>带上我吧，一起看到更大的世界</p>
            <div class="touch">
               <ul>
-                <li>
+                <li onmouseover="Choice('微信联系方式')">
                   <el-popover
                     placement="top-start"
                     width="200"
@@ -26,7 +26,7 @@
                     </el-button>
                   </el-popover>
                 </li>
-                <li>
+                <li onmouseover="Choice('QQ联系方式')">
                   <el-popover
                     placement="top-start"
                     width="200"
@@ -39,7 +39,7 @@
                     </el-button>
                   </el-popover>
                 </li>
-                <li>
+                <li  onmouseover="Choice('QQ邮箱联系方式')">
                   <el-popover
                     placement="top-start"
                     width="200"
@@ -52,7 +52,7 @@
                     </el-button>
                   </el-popover>
                 </li>
-                <li>
+                <li  onmouseover="Choice('手机号码联系方式')">
                   <el-popover
                     placement="top-start"
                     width="200"
@@ -65,7 +65,7 @@
                     </el-button>
                   </el-popover>
                 </li>
-                 <li>
+                 <li  onmouseover="Choice('github')">
                   <el-popover
                     placement="top-start"
                     width="200"

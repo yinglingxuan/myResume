@@ -40,27 +40,27 @@
 
       <div id="fp-nav" class="right" style="margin-top:-100px;">
         <ul>
-          <li class="outer" v-bind:class="{out:sizes==1}">
+          <li class="outer" v-bind:class="{out:sizes==1}" onmouseover="Choice('第一页,首页')">
               <a><span style="background: aqua;"></span></a>
           </li>
-          <li class="outer active" v-bind:class="{out:sizes==2}">
+          <li class="outer active" v-bind:class="{out:sizes==2}" onmouseover="Choice('第二页，个人介绍页')">
               <a><span style="background: aqua;"></span></a>
           </li>
-          <li class="outer" v-bind:class="{out:sizes==3}">
+          <li class="outer" v-bind:class="{out:sizes==3}" onmouseover="Choice('第三页，技能介绍页')">
               <a><span style="background: aqua;"></span></a>
           </li>
-          <li class="outer" v-bind:class="{out:sizes==4}">
+          <li class="outer" v-bind:class="{out:sizes==4}" onmouseover="Choice('第四页，个人经历页')">
               <a><span style="background: aqua;"></span></a>
           </li>
-          <li class="outer" v-bind:class="{out:sizes==5}">
+          <li class="outer" v-bind:class="{out:sizes==5}" onmouseover="Choice('第五页，作品介绍页')">
             <a><span style="background: aqua;"></span></a>
           </li>
-          <li class="outer" v-bind:class="{out:sizes==6}">
+          <li class="outer" v-bind:class="{out:sizes==6}" onmouseover="Choice('第六页，联系方式页')">
             <a><span style="background: aqua;"></span></a>
           </li>
 
 
-          <div class="jpgs">
+          <div class="jpgs" onmouseover="Choice('音乐操作')">
             <div class="simgs mids">
               <img src="http://cnd.yinglingxuan.cn/13.jpg">
             </div>
@@ -173,7 +173,7 @@
           <p>坐标深圳,曾在汕头工作了快两年,主要负责公众号小程序官网等页面开发</p>
 
           <h3>技能掌握</h3>
-          <p>1. 热爱前端，熟悉各种Web前端技术，包括HTML、DIV、CSS、Javascript、jQuery、AJAX、JSON、Vue.js等。</p>
+          <p>1. 热爱前端，熟悉各种Web前端技术，包括HTML、DIV、CSS、Javascript、jQuery、AJAX、JSON、Vue.js、uni-app等。</p>
           <p>2. 使用移动端的rem布局,响应式布局,解决不同移动端设备的适配和兼容问题</p>
           <p>3. 熟悉bootstrap,LayUi,element-Ui,Jquery类库进行pc端项目快速开发, 熟练使用Vant.Ui,WeUi等Ui框架进行移动端项目的开发。</p>
           <p>4. 熟悉原生JS,熟悉JavaScript的面向对象编程，了解作用域以及闭包的原理。</p>
@@ -199,8 +199,8 @@
                 </el-timeline-item>
                 <el-timeline-item timestamp="2019/3" placement="top">
                   <el-card>
-                    <h4>深圳积家系统实业有限公司</h4>
-                    <p>负责小程序商城类开发</p>
+                    <h4>深圳建科网络科技有限公司</h4>
+                    <p>负责公众号页面、SaaS系统，公装宝APP的迭代维护</p>
                   </el-card>
                 </el-timeline-item>
               </el-timeline>
@@ -280,6 +280,23 @@
             <p class="bac"></p>
         </div>
     </div>
+
+
+
+
+    <div class="waifu">
+        <div class="waifu-tips"></div>
+        <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+        <div class="waifu-tool">
+            <span class="fui-home"></span>
+            <span class="fui-chat"></span>
+            <span class="fui-eye"></span>
+            <span class="fui-user"></span>
+            <span class="fui-photo"></span>
+            <!-- <span class="fui-info-circle"></span>
+            <span class="fui-cross"></span> -->
+        </div>
+    </div>
   </div>
 </template>
 
@@ -340,7 +357,8 @@
                  this.icons='el-icon-circle-plus-outline';
                 // var top = $(this).scrollTop(); 
                 // console.info(top);
-            }
+            },
+           
         },
         mounted(){
           this.heights=document.documentElement.clientHeight || document.body.clientHeight;
@@ -462,7 +480,134 @@
             }catch (e) {
             }
           }
-          /*第三页*/
+
+
+          //看版娘
+          String.prototype.render = function (context) {
+              var tokenReg = /(\\)?\{([^\{\}\\]+)(\\)?\}/g;
+
+              return this.replace(tokenReg, function (word, slash1, token, slash2) {
+                  if (slash1 || slash2) {  
+                      return word.replace('\\', '');
+                  }
+
+                  var variables = token.replace(/\s/g, '').split('.');
+                  var currentObject = context;
+                  var i, length, variable;
+
+                  for (i = 0, length = variables.length; i < length; ++i) {
+                      variable = variables[i];
+                      currentObject = currentObject[variable];
+                      if (currentObject === undefined || currentObject === null) return '';
+                  }
+                  return currentObject;
+              });
+          };
+
+
+          var re = /x/;
+          console.log(re);
+          re.toString = function() {
+              showMessage('哈哈，你打开了控制台，是想要看看我的秘密吗？', 5000, true);
+              return '';
+          };
+
+          $(document).on('copy', function (){
+              showMessage('你都复制了些什么呀，转载要记得加上出处哦', 5000, true);
+          });
+
+          $('.waifu-tool .fui-home').click(function (){
+              //window.location = 'https://www.fghrsh.net/';
+              window.location = window.location.protocol+'//'+window.location.hostname+'/'
+          });
+
+          $('.waifu-tool .fui-eye').click(function (){
+              loadOtherModel();
+          });
+
+          $('.waifu-tool .fui-chat').click(function (){
+              showHitokoto();
+          });
+
+          $('.waifu-tool .fui-user').click(function (){
+              loadRandModel();
+          });
+
+          $('.waifu-tool .fui-info-circle').click(function (){
+              //window.open('https://imjad.cn/archives/lab/add-dynamic-poster-girl-with-live2d-to-your-blog-02');
+              window.open('https://www.fghrsh.net/post/123.html');
+          });
+
+          $('.waifu-tool .fui-cross').click(function (){
+              sessionStorage.setItem('waifu-dsiplay', 'none');
+              showMessage('愿你有一天能与重要的人重逢', 1300, true);
+              window.setTimeout(function() {$('.waifu').hide();}, 1300);
+          });
+
+          $('.waifu-tool .fui-photo').click(function (){
+              showMessage('照好了嘛，是不是很可爱呢？', 5000, true);
+              window.Live2D.captureName = 'Pio.png';
+              window.Live2D.captureFrame = true;
+          });
+
+          (function (){
+              var text;
+              //var SiteIndexUrl = 'https://www.fghrsh.net/';  // 手动指定主页
+              var SiteIndexUrl = window.location.protocol+'//'+window.location.hostname+'/';  // 自动获取主页
+              
+              if (window.location.href == SiteIndexUrl) {      // 如果是主页
+                  var now = (new Date()).getHours();
+                  if (now > 23 || now <= 5) {
+                      text = '你是夜猫子呀？这么晚还不睡觉，明天起的来嘛';
+                  } else if (now > 5 && now <= 7) {
+                      text = '早上好！一日之计在于晨，美好的一天就要开始了';
+                  } else if (now > 7 && now <= 11) {
+                      text = '上午好！工作顺利嘛，不要久坐，多起来走动走动哦！';
+                  } else if (now > 11 && now <= 14) {
+                      text = '中午了，工作了一个上午，现在是午餐时间！';
+                  } else if (now > 14 && now <= 17) {
+                      text = '午后很容易犯困呢，今天的运动目标完成了吗？';
+                  } else if (now > 17 && now <= 19) {
+                      text = '傍晚了！窗外夕阳的景色很美丽呢，最美不过夕阳红~';
+                  } else if (now > 19 && now <= 21) {
+                      text = '晚上好，今天过得怎么样？';
+                  } else if (now > 21 && now <= 23) {
+                      text = '已经这么晚了呀，早点休息吧，晚安~';
+                  } else {
+                      text = '嗨~ 快来逗我玩吧！';
+                  }
+              } else {
+                  if(document.referrer !== ''){
+                      var referrer = document.createElement('a');
+                      referrer.href = document.referrer;
+                      var domain = referrer.hostname.split('.')[1];
+                      if (window.location.hostname == referrer.hostname) {
+                          text = '欢迎阅读<span style="color:#0099cc;">『' + document.title.split(' - ')[0] + '』</span>';
+                      } else if (domain == 'baidu') {
+                          text = 'Hello! 来自 百度搜索 的朋友<br>你是搜索 <span style="color:#0099cc;">' + referrer.search.split('&wd=')[1].split('&')[0] + '</span> 找到的我吗？';
+                      } else if (domain == 'so') {
+                          text = 'Hello! 来自 360搜索 的朋友<br>你是搜索 <span style="color:#0099cc;">' + referrer.search.split('&q=')[1].split('&')[0] + '</span> 找到的我吗？';
+                      } else if (domain == 'google') {
+                          text = 'Hello! 来自 谷歌搜索 的朋友<br>欢迎阅读<span style="color:#0099cc;">『' + document.title.split(' - ')[0] + '』</span>';
+                      } else {
+                          text = 'Hello! 来自 <span style="color:#0099cc;">' + referrer.hostname + '</span> 的朋友';
+                      }
+                  } else {
+                      text = '欢迎阅读<span style="color:#0099cc;">『' + document.title.split(' - ')[0] + '』</span>';
+                  }
+              }
+              showMessage(text, 6000);
+          })();
+
+          //window.hitokotoTimer = window.setInterval(showHitokoto,30000);
+          /* 检测用户活动状态，并在空闲时 定时显示一言 */
+          var getActed = false;
+          window.hitokotoTimer = 0;
+          var hitokotoInterval = false;
+
+          $(document).mousemove(function(e){getActed = true;}).keydown(function(){getActed = true;});
+          setInterval(function() { if (!getActed) ifActed(); else elseActed(); }, 1000);
+          initModel("http://cnd.yinglingxuan.cn/");
         }
     }
 </script>
